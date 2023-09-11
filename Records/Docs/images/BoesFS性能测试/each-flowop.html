@@ -1,0 +1,342 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=scatter-simple&lang=js&code=PYBwLglsB2AEC8sDeAoWsAeBBDEDOAXMmuqWAJ4gCmRA5AMYCGYVA5sAE7m0A0JpsRrjwAVCPQDWRJLDwALYAHciAM0YAbPFVgBfPgPQATZoyIBtWoarqqLFRBu9YtdfjCGIHJ7Txhm9xx5nFTxyaHoAqm9GEGpoQ0iORnjeWlAqaEjU-nVgLSyeWg4qRgSHKMLFDgg7cuzi5iosgF19XTbyHHxpfjJKGmcANw0AVwre9CF8ABlGACNrHoNSFU4AW2YWDjokYfUxnVhQPAB6PFoJ9su8JhsiMA4xkj0SSDAbWCXSGxUwAgAiegZLb_NroFgYP60ABi5QW4TksBEVF8sAA8ipYAA5ZgQQbaZKGWAAIWAKOhAGVeL08CM5hCoVh8UlWNpocUAI5jcLkdGYgCijHoiOhuUUF3QL3QWmqKPMvVQy1CazmwHUFIgAC8BgAmACsYNI9DVnAItAAxABmADsWB1ABEsNTlsY_AQzJd0BYrDZaoEdQAOACcAEYAHQANlantgFlcvg8Xh4gdDkejyy9Pj8YAKsBT4ajQQEMYsITCETqQXzacNAgsMTiZRsSRSVeD4aD6YzFnSmUreeDOq7ywsOTyTUrKaHtdIFgaTYqU-HBgsVRqE8CA6DOrDIeXdYYDT9FS3O8t-9gF4o1DoN02VC8vRevQV13IKrVGu1RBDAAYZ8auTbBaNp2o6zoGK6pixiWljWLYG4njq256hemY-ghuaBpae4zuh8HHk4yFBtaaGxnBvqIURwaFrBGGEW2Qa_mR3oEVRVbbsxeHkfR7EDhGtEZjxbFYUGloACwsRRmH9jq1oRrhdEibJNFkbB8buJ4REoVJGmJtROG6W4-kcSRRkJlpjGCd2LjGZZW5cepdlJnmnHmZpLmBgJ7kma5Ek-fZckKQFnmqdxsG-P4sk6dxFiRTmKmGbFWZRZuxGkcl8VYWFEXZtlTFSVl0U6o5QlxXlKneZlFVpWJknValSHyYpZUpQlaU5UJsFluEon6lJPUVh1SXdaEvXRWZyWDfl1kjrQ00qQVU1jUNSFuct5bZVVo2bdF_kbeNaXNQNK0zWprUNhkC4toY2k6rNK60Jd8SJISBktTZz3XW9pkZbBX2va2W4PQeAPlDd1GhlJYPNj9rkldDsRXYDt1tttF1Iy94Nw8h-3_Zj31A0FH1zTDD448Gf1da1vZ9SDs5pHE2UjTTTMTQGUm04t9OZlzHVQ8lfNrQjgtsx16M2UL2l46zGRYcdoty4tVMZrBY75JO248-R6vsdhJOPbrBTERzyVG5OnU2eb_rtlJ1vC6VVu5Br4va6Ozt8bj9Vqx78vBWbvvK-dNnzsbWtSaHFssyHJQLrwJsR7HxuW3Nkc2wLsFp4u62Z0nlVu0Uee1TLMelH7BsHlnkMq8ssFrgx8MF_XesBtHc3N2HQam3X1QMSmTe9y3GetR3msiz367JxL7eD2HJcz5Pk7ydOE995TwdzfQR6e-HZvb8zFcM1vJQNwne8n576_n40-WH5mx838Vd86_v-d26_xfe61D-n8v78X_lGupArz9FvEwMAWwJSkB0L0Is6AXwCEVAYZUqp1Ral1AaS4gFTQWioL-CMElLQQQEFBd0SlKLG2tOJCMu4QrxyoTQ5-5VGpEQYWGacBgdqHSatQsM55kpkwhlWNh3dZZ9iOrw0RTtxyUMkYnMuS85HJVHhImhUjN4fx4UA9AICbzODvBAh8UDJSGiQQIFBn50E_n_Fgk0wFzR4IIeJIhM5SEwVarxbKIZOzJU8Spe6Uk_FpQEo7OaQSmqWh8eQmSR09RMOkqfAMv5UK-OUkdCMK8PFpKataeJ4SiICW0QzfJVYBLPychZUK3i6FtgCclPSgUQk1LzNaSJzS5JxPaUklJFSPKsIye060uT2mFJGf7GMuUWFtmqQ1dqSEAx1MmXMgp4zWpFSOm02Z8tOlbJUskwqNUmoDN2UdYZJykKjPOSs8prUFodRmVw1a1E5InV2sE1ZNk7kRKibc06slrQ7MedlfZB0nnCOOUC_5ZzIXvKKZmL51yN6PUERTceGNGwo2eXC8iKKiZlMRhi7GRMqGhORQTTFwi9SZM-uSolqMBwgvxoS2GxLjnUxpcy8mxLoXouRnSlZ6iyWcqEXmAS1La5iOymiyWYt5kvMVuIi5Hy5pS2EeJUlB5VUtKpZzWV1FGWSv-RCw1pz4lavuhGQVmq9WlONarb-gcbbSs3o6xcCzsXuxkZOfFAcvX-hJXbV19CdW-pdm6g10iw30LtS6v1i4hnxPtvHASVqj5BuTGKpFlci5uudY9KuyZ3XyLjhm5V-ac30PVcWyhIbc4KJthG1OFbkx_2SgWuSPLS4lotamzM7bM3hRHrPfxGqGYqLlR62g47EXKOHRI0dmZp2UvFY9JdgZG2rrnfGmNm7F7-s7QvPuKapJroHRM7-mjnkLpfgA_xk6f6ex9WrS9arr2jhfdqldB4H3AoLj-o1_Dn23tNf_R-7ze03rA0qr9l4ZzXgGD4cBkCnwkGaCgHQABuIAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  xAxis: {
+      type: 'category',
+      axisTick: { show: false },
+      data: ['deletefile', 'listdir', 'statfile', 'fsyncfile', 'appendfilerand','openfile','closefile','readfile','writefile','createfile'],
+  },
+  yAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} ops/s'
+      },
+      scale: true
+  },
+  title : {
+    left:"center",
+    text:'Filebench Test Of Native and BoesFS',
+    subtext:'Average Frequency Of Each Flow'
+  },
+  series: [
+    {
+      symbolSize: 25,
+      color:'#37A2DA',
+      data:[
+        ['deletefile',2891.6],
+        ['listdir',2891.6],
+        ['statfile', 2891.6],     
+        ['fsyncfile', 2891.6],
+        ['appendfilerand', 2891.9],
+        ['openfile', 2892],
+        ['closefile',2892],
+        ['readfile',2892],
+        ['writefile', 2892.1],
+        ['createfile', 2892.3],
+      ],
+      type: 'scatter'
+    },
+
+    
+    {
+      symbolSize: 10,
+      color:'#37A2DA',
+      data: [
+        ['deletefile', 2925],
+        ['deletefile', 2831],
+        ['deletefile', 2997],
+        ['deletefile', 2896],
+        ['deletefile', 2890],
+        ['deletefile', 2920],
+        ['deletefile', 2866],
+        ['deletefile', 2934],
+        ['deletefile', 2761],
+        ['deletefile', 2896],
+        
+        ['listdir', 2925],
+        ['listdir', 2831],
+        ['listdir', 2997],
+        ['listdir', 2896],
+        ['listdir', 2890],
+        ['listdir', 2920],
+        ['listdir', 2866],
+        ['listdir', 2934],
+        ['listdir', 2761],
+        ['listdir', 2896],
+        
+        ['statfile', 2925],
+        ['statfile', 2831],
+        ['statfile', 2997],
+        ['statfile', 2896],
+        ['statfile', 2890],
+        ['statfile', 2920],
+        ['statfile', 2866],
+        ['statfile', 2934],
+        ['statfile', 2761],
+        ['statfile', 2896],
+        
+        ['fsyncfile', 2925],
+        ['fsyncfile', 2831],
+        ['fsyncfile', 2997],
+        ['fsyncfile', 2896],
+        ['fsyncfile', 2890],
+        ['fsyncfile', 2920],
+        ['fsyncfile', 2866],
+        ['fsyncfile', 2934],
+        ['fsyncfile', 2761],
+        ['fsyncfile', 2896],
+        
+        ['appendfilerand', 2926],
+        ['appendfilerand', 2831],
+        ['appendfilerand', 2997],
+        ['appendfilerand', 2896],
+        ['appendfilerand', 2891],
+        ['appendfilerand', 2920],
+        ['appendfilerand', 2866],
+        ['appendfilerand', 2934],
+        ['appendfilerand', 2761],
+        ['appendfilerand', 2897],
+        
+        ['openfile', 2926],
+        ['openfile', 2831],
+        ['openfile', 2998],
+        ['openfile', 2896],
+        ['openfile', 2891],
+        ['openfile', 2920],
+        ['openfile', 2866],
+        ['openfile', 2934],
+        ['openfile', 2761],
+        ['openfile', 2897],
+        
+        ['closefile',2926],
+        ['closefile',2831],
+        ['closefile',2998],
+        ['closefile',2896],
+        ['closefile',2891],
+        ['closefile', 2920],
+        ['closefile', 2866],
+        ['closefile', 2934],
+        ['closefile', 2761],
+        ['closefile', 2897],
+        
+        ['readfile',2926],
+        ['readfile',2831],
+        ['readfile',2998],
+        ['readfile',2896],
+        ['readfile',2891],
+        ['readfile',2920],
+        ['readfile', 2866],
+        ['readfile', 2934],
+        ['readfile', 2761],
+        ['readfile', 2897],
+        
+        ['writefile', 2926],
+        ['writefile',2831],
+        ['writefile',2998],
+        ['writefile',2896],
+        ['writefile',2891],
+        ['writefile',2920],
+        ['writefile',2866],
+        ['writefile',2934],
+        ['writefile',2762],
+        ['writefile',2897],
+        
+        ['createfile', 2926],
+        ['createfile', 2831],
+        ['createfile', 2998],
+        ['createfile', 2897],
+        ['createfile', 2891],
+        ['createfile', 2921],
+        ['createfile', 2866],
+        ['createfile', 2934],
+        ['createfile', 2762],
+        ['createfile', 2897],
+      ],
+      type: 'scatter'
+    }
+    ,    
+    
+    {
+      symbolSize: 25,
+      color:'#e06343',
+      data:[
+        ['deletefile',2746.1],
+        ['listdir',2746.1],
+        ['statfile', 2746.2],     
+        ['fsyncfile', 2746.3],
+        ['appendfilerand', 2746.8],
+        ['openfile', 2746.8],
+        ['closefile',2746.8],
+        ['readfile',2746.8],
+        ['writefile', 2746.8],
+        ['createfile', 2747],
+      ],
+      type: 'scatter'
+    },
+    {
+      symbolSize: 10,
+      color:'#e06343',
+      data: [
+        ['deletefile', 2819],
+        ['deletefile', 2826],
+        ['deletefile', 2660],
+        ['deletefile', 2739],
+        ['deletefile', 2751],
+        ['deletefile', 2805],
+        ['deletefile', 2762],
+        ['deletefile', 2771],
+        ['deletefile', 2667],
+        ['deletefile', 2661],
+        
+        ['listdir', 2819],
+        ['listdir', 2826],
+        ['listdir', 2660],
+        ['listdir', 2739],
+        ['listdir', 2751],
+        ['listdir', 2805],
+        ['listdir', 2762],
+        ['listdir', 2771],
+        ['listdir', 2667],
+        ['listdir', 2661],
+        
+        ['statfile', 2819],
+        ['statfile', 2826],
+        ['statfile', 2661],
+        ['statfile', 2739],
+        ['statfile', 2751],
+        ['statfile', 2805],
+        ['statfile', 2762],
+        ['statfile', 2771],
+        ['statfile', 2667],
+        ['statfile', 2661],
+        
+        ['fsyncfile', 2819],
+        ['fsyncfile', 2827],
+        ['fsyncfile', 2661],
+        ['fsyncfile', 2739],
+        ['fsyncfile', 2751],
+        ['fsyncfile', 2805],
+        ['fsyncfile', 2762],
+        ['fsyncfile', 2771],
+        ['fsyncfile', 2667],
+        ['fsyncfile', 2661],
+        
+        ['appendfilerand', 2820],
+        ['appendfilerand', 2827],
+        ['appendfilerand', 2661],
+        ['appendfilerand', 2740],
+        ['appendfilerand', 2752],
+        ['appendfilerand', 2805],
+        ['appendfilerand', 2762],        
+        ['appendfilerand', 2771],
+        ['appendfilerand', 2668],
+        ['appendfilerand', 2662],
+        
+        ['openfile', 2820],
+        ['openfile', 2827],
+        ['openfile', 2661],
+        ['openfile', 2740],
+        ['openfile', 2752],
+        ['openfile', 2805],
+        ['openfile', 2762],
+        ['openfile', 2771],
+        ['openfile', 2668],
+        ['openfile', 2662],
+        
+        ['closefile',2820],
+        ['closefile',2827],
+        ['closefile',2661],
+        ['closefile',2740],
+        ['closefile',2752],
+        ['closefile',2805],
+        ['closefile',2762],
+        ['closefile',2771],
+        ['closefile',2668],
+        ['closefile',2662],
+        
+        ['readfile',2820],
+        ['readfile',2827],
+        ['readfile',2661],
+        ['readfile',2740],
+        ['readfile',2752],
+        ['readfile',2805],
+        ['readfile',2762],
+        ['readfile',2771],
+        ['readfile',2668],
+        ['readfile',2662],
+        
+        ['writefile', 2820],
+        ['writefile', 2827],
+        ['writefile', 2661],
+        ['writefile', 2740],
+        ['writefile', 2752],
+        ['writefile',2805],
+        ['writefile',2762],
+        ['writefile',2771],
+        ['writefile',2668],
+        ['writefile',2662],
+        
+        ['createfile', 2820],
+        ['createfile', 2827],
+        ['createfile', 2661],
+        ['createfile', 2740],
+        ['createfile', 2752],
+        ['createfile', 2806],
+        ['createfile', 2763],
+        ['createfile', 2771],
+        ['createfile', 2668],
+        ['createfile', 2662],
+      ],
+      type: 'scatter'
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

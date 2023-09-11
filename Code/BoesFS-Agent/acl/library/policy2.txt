@@ -1,0 +1,3 @@
+# /bin/bash 不可以对 lookup.txt 和 test5进行操作
+p, /bin/bash, /home/boes/lookup.txt , file , deny
+p, /bin/bash, /home/boes/test , file , deny

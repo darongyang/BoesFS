@@ -1,0 +1,34 @@
+fn build
+fn bump
+fn config
+fn create
+fn create app
+fn create context
+fn create function
+fn create trigger
+fn delete
+fn deploy
+fn get
+fn get config
+fn help
+fn init
+fn inspect
+fn invoke
+fn list
+fn list apps
+fn list config
+fn list contexts
+fn list triggers
+fn migrate
+fn push
+fn start
+fn stop
+fn unset
+fn update
+fn update app
+fn update context
+fn update function
+fn update server
+fn update trigger
+fn use
+fn version

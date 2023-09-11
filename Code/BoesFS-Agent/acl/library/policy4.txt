@@ -1,0 +1,5 @@
+# /home/boes/test0/A 不可见；/home/boes/test0/B 可见，B下的子目录子文件不可见；/home/boes/test0/a.txt不可见
+p, /bin/bash, /home/boes/test0/A , lookup, file, deny
+p, /bin/bash, /home/boes/test0/a.txt , lookup,  file, deny
+p, /bin/bash, /home/boes/test0/B, open,  file, deny
+

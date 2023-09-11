@@ -1,0 +1,10 @@
+# 同时有file和dir
+p,  /home/boes/lookup.txt , lookup , file , deny
+p,  /home/boes/read.txt , read ,  file , deny
+p,  /home/boes/write.txt, write,  file , deny
+p,  /home/boes/open.txt, open, file , deny
+p,  /home/boes/unlink.txt,unlink, file , deny
+p,  /home/boes/m_dir,mkdir, file , deny
+p,  /home/boes/rm_dir,rmdir, file , deny
+p,  /home/boes/test1 , write, dir,deny
+p,  /home/boes/test1 , unlink, dir,deny

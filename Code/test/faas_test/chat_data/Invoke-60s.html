@@ -1,0 +1,99 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=line-stack&code=PYBwLglsB2AEC8sDeBYAULWkwBsCmAXMuppmHgB5hEDkAKgBZ5YQC2zwAZrJwK7QBjSDFgBnPACcAbhAHNOwCbABi0EBOAArPENgBDaABNYAIWB5RygMoBaZXr1WaAGhKlRvAEbkqtcqLAeRVgARgAGFnZRWAEYSGheYF5RHABPZ1gIaClgAGsOQWYs2AA2MNEXN0x8TmpYGjlocglKjFgAX1c2sGBgHEgQIlQ2sgkIAHNxyVo9CggKt063fCmjIarYQz0wPSIAbRpOaBd6z3NRTgqAXS7SLFAiAHYwxdvYcbHDdZHYGrqaADMAFJWncxuMGP8ACwgt6YM5gHqsWjA0GkWJNPRZAAyek8eBwRDAEl4eFebh6fTOFG-d04eG2vAkhGIP0woj0UjwAEFRABJVh6KZDdobUVtJZtCjcuaiWmkMCpEAshrbPDjRSpNHwpJGPQSVIAcT0gx4ehw4jhm22u1gBxCJxoACZHQDHVDHQBWR0lR2PR0ADkdAE5HeEaDcNtA9OxaIBzI0AMhGAQmtAA6m2tg0fY2OAAm2UGgtEazRo5LaqRl83lZCVKqk5tJ6czKsTgDfTQAvqSWJW9xGMLPsNsM7pgm7Qjunq8raDgsnhx9advswgA6R4hKEZZfBgMBjIhJdhMIlXf7qEA4-Hp3np1hc-PS-wTfBz3ngFHh9L4OPYORn6Su6DocR1Oc5LjnRVJ3qadoFnK1MC2Bc7WXEIQjPd8wifDd92DG80IDe9l3QkJMPQ_CsJwgjg1IsIA0eYi8J_O5xUwK50HaABuIA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  title: {
+    text: 'The time of function service for Fnproject and BoesFS-FaaS',
+    subtext: 'test for 10 times continuously, invoke once in 60s',
+    left: 'center',
+  },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['fn', 'boesfs'],
+    top: 70
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    name: '执行次数',
+    nameLocation: 'center'
+  },
+  yAxis: {
+    type: 'value',
+    name: '执行时间'
+  },
+  series: [
+    {
+      name: 'fn',
+      type: 'line',
+      data: [0.714, 0.988, 1.006, 1.043, 1.062, 1.020, 1.072, 0.995, 1.036, 0.979],
+    },
+    {
+      name: 'boesfs',
+      type: 'line',
+      data: [0.113, 0.095, 0.090, 0.082, 0.091, 0.092, 0.090, 0.092, 0.087, 0.082],
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

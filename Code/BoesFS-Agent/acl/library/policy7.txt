@@ -1,0 +1,8 @@
+# 7个基本的API 只有file字段
+p, /bin/bash, /home/boes/lookup.txt , lookup , file , deny
+p, /bin/bash, /home/boes/read.txt , read ,  file , deny
+p, /bin/bash, /home/boes/write.txt, write,  file , deny
+p, /bin/bash, /home/boes/open.txt, open, file , deny
+p, /bin/bash, /home/boes/unlink.txt,unlink, file , deny
+p, /bin/bash, /home/boes/m_dir,mkdir, file , deny
+p, /bin/bash, /home/boes/rm_dir,rmdir, file , deny

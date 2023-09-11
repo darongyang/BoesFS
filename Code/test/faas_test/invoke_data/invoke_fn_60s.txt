@@ -1,0 +1,43 @@
+{"message": "Hello Felix"}
+real    0m0.714s
+user    0m0.006s
+sys     0m0.000s
+{"message": "Hello Felix"}
+real    0m0.988s
+user    0m0.005s
+sys     0m0.000s
+{"message": "Hello Felix"}
+real    0m1.006s
+user    0m0.004s
+sys     0m0.000s
+{"message": "Hello Felix"}
+real    0m1.043s
+user    0m0.005s
+sys     0m0.000s
+{"message": "Hello Felix"}
+real    0m1.062s
+user    0m0.005s
+sys     0m0.000s
+{"message": "Hello Felix"}
+real    0m1.020s
+user    0m0.005s
+sys     0m0.000s
+{"message": "Hello Felix"}
+real    0m1.072s
+user    0m0.005s
+sys     0m0.000s
+{"message": "Hello Felix"}
+real    0m0.995s
+user    0m0.005s
+sys     0m0.000s
+{"message": "Hello Felix"}
+real    0m1.036s
+user    0m0.000s
+sys     0m0.005s
+{"message": "Hello Felix"}
+real    0m0.979s
+user    0m0.000s
+sys     0m0.004s
+
+
+[0.714, 0.988, 1.006, 1.043, 1.062, 1.020, 1.072, 0.995, 1.036, 0.979]

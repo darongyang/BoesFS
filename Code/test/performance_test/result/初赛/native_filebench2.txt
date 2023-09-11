@@ -1,0 +1,30 @@
+Filebench Version 1.5-alpha3
+WARNING: Could not open /proc/sys/kernel/shmmax file!
+It means that you probably ran Filebench not as a root. Filebench will not increase shared
+region limits in this case, which can lead to the failures on certain workloads.
+0.000: Allocated 173MB of shared memory
+0.048: File-server Version 3.0 personality successfully loaded
+0.048: Populating and pre-allocating filesets
+0.076: bigfileset populated: 10000 files, avg. dir. width = 20, avg. dir. depth = 3.1, 0 leafdirs, 1240.757MB total size
+0.077: Removing bigfileset tree (if exists)
+0.082: Pre-allocating directories in bigfileset tree
+0.177: Pre-allocating files in bigfileset tree
+10.390: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+10.390: Population and pre-allocation of filesets completed
+10.390: Starting 1 filereader instances
+11.411: Running...
+71.476: Run took 60 seconds...
+71.550: Per-Operation Breakdown
+statfile1            38835ops      646ops/s   0.0mb/s      0.0ms/op [0.01ms - 96.02ms]
+deletefile1          38831ops      646ops/s   0.0mb/s      3.9ms/op [0.03ms - 830.07ms]
+closefile3           38836ops      646ops/s   0.0mb/s      0.0ms/op [0.01ms - 180.27ms]
+readfile1            38838ops      646ops/s  83.6mb/s      1.7ms/op [0.01ms - 3584.59ms]
+openfile2            38838ops      646ops/s   0.0mb/s      0.1ms/op [0.01ms - 137.65ms]
+closefile2           38838ops      646ops/s   0.0mb/s      0.0ms/op [0.01ms - 53.09ms]
+appendfilerand1      38838ops      646ops/s   5.1mb/s      5.9ms/op [0.02ms - 884.30ms]
+openfile1            38841ops      647ops/s   0.0mb/s      0.1ms/op [0.01ms - 115.20ms]
+closefile1           38841ops      647ops/s   0.0mb/s      0.0ms/op [0.01ms - 82.64ms]
+wrtfile1             38857ops      647ops/s  80.4mb/s     58.9ms/op [0.02ms - 1308.75ms]
+createfile1          38885ops      647ops/s   0.0mb/s      0.6ms/op [0.03ms - 232.74ms]
+71.550: IO Summary: 427278 ops 7112.462 ops/s 646/1293 rd/wr 169.0mb/s  23.8ms/op
+71.550: Shutting down processes

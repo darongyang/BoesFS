@@ -1,0 +1,208 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=bar-simple&code=MYewdgzgLgBADiCAZAltGBeGBtAsAKBhgHIAbAUwDMpiAaAo4gJxQHMALG-wkqEOOgxIAjEFD4BbQT2IpIKACblpjOREXkAKvxUk1GpFS5DZ8pQCU2nXafVKAQmMk39S7XEPUXZrf0sdjGVdyR3EQCU9A1R9QyX9rAgBdAG4CAEM4OAA6UDBKNgAFNKY0iXIociYITBgAbyEmMTSKgC46oSIJOTaAWgBOAAZuIk60gA82waEAX2GYNNI2MDb6niJ-KBRwCBWOkYpqNrIjXRGYYHIwCqYji6vK05GWAKPnhLWYaZm5gDdKzeACwAgotWMt2h8NltILsPkQ-HAjgjHp1FAoKEcugp0co5mdRGEJEcCc49l8eLMhAh1JtwLCzlDtm1qahoFkmOQFABXC4ACkoXLAwFpYBgvIkGVo8EQAEoIWdRnBsNTEjVqak4TAOVAuUxRRK4BqzrM6tMZd8hAo0FA0kLyPSRl1wUM9hKJjAAIwDAYzAjTDUZbK5fKsGqrIiNG2tGCDOYLJZHA5RGB_JgA4Gg8HELE43TUlAio7BWLhXRW6C2i5tD0AVjm4AAwuxbax7TABUKRWK5eGRrl0KQ0sJyKQAPJwLtYXtnSPNNuBnLgEPspoVPEjeNgtoL4NsLKbsDroip9OkEEJ-aZRd5PcnlCAs-Zo_SmnQ7dX3esLL5kXP8s2u13yDJc93_StyDJI1HQATybYooCyCBynHEVeWnEYkJYcgdhwPYznQhUYEHYdSDaYiRxQ6E8JGSlNSIAiFXI0iiKHCiJyoujPmfejqLOJiyNYsd2PAXiuNEhi-MEgSSMokTOPJQjEjJGUoPJf0CH7WAmNk0UpyECB2BAAB3NooCYLlyDmH830vYCby_azwDmMDANs69lxci440zID3L3A9fn-e8MwvHcQK_O8H3PME5lnaMwvslco0soRKBAJgJXESojlqYBpnosBSnIAAfWo0mmaZdDSq4AGUUAALzbD0ADZYvvdgHSIQqyhWBTPj9DVGV0-UYE2KAKBgTqiKMFoACI7muWb1wqMYoBaYgADEUAoYchXYGBNGw2BR0oGAADlmhQP55jABQYEcbCNpqx4IC5YQVrW4ggVTNJWxgDaOQARwsoVoJgE6YAAUTSYB9o20hjOIC0eD4EBSE2RERvhZ5WxuEhxjQR4CYgAoQDka4pvhaC4DbYgDLSBREbJZGiAoVtbqmhRmjSNpsE29KjroEgaoqTJcRIAARbD_iF4gAHVykHW7iCUik5lR0hRHddCDOM0zzJSyEsKuI5IoWR4k1eKxk3hfhbkua5Hkochml1NsGIlJgAGsVhgXWTNGg2xM1LmbQANRQcgA9qP3DIDsyLKlDkGdHMBSGgtpKAWJDg8IiVWHvTRqfd2O9cDxPRuL3myDkcXiGEYpZYrYAvZV3OFQ5aABd9_39Ys9uzggNI_iBCAAEl85L3vy_IfqPj62iiDGIExjQXm9gYqAq5IQEKlYdLoJReZV4gTR7x9upS4DrPSBzxeFVDnmcGIJQKAqfIKFlxZoCtJgm-Sj-ddgAIyQoA2WlAIDQSFGA2gxBAyXAUIAkoytYH8EuDA5gLtEHbVxMQIyLB344LoMQYAydCGf1VsaIQiQ5jQRXmvXCHwGLEyQFJLGCo0oZWaBTEgtQfgLAsvlfgEAAD0EAkaanvmcLeNNTYCOUMzHgND9KVEjjhPATDqLdVpoVTYfwj4yNpg3P-z5jEAHEMhtBdJqfiLEZLCUPNRcgEg4DNnUDhCS7YQDAC5DhOmqjsISMIlIkYj9eYACYAAcfQPRZFajAKJMS4lSkSbE-JqTkkZL6LQRJ4ScnRLybk_JfRwlZA9MU0pABmShNF1wMW0cSEA2EIEGO3vXRuz5bHaQcc-Zxri0juMpiMNKPi_GYTUUEhUISiBhJwOEgA7AAFmamUlJSyVnlIWcsrIeSEnrKyJUtZ2zIlHJWScrZZycn7POdcq5iz5k1KIPfVW_ogA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    
+const posList = [
+  'left',
+  'right',
+  'top',
+  'bottom',
+  'inside',
+  'insideTop',
+  'insideLeft',
+  'insideRight',
+  'insideBottom',
+  'insideTopLeft',
+  'insideTopRight',
+  'insideBottomLeft',
+  'insideBottomRight'
+];
+app.configParameters = {
+  rotate: {
+    min: -90,
+    max: 90
+  },
+  align: {
+    options: {
+      left: 'left',
+      center: 'center',
+      right: 'right'
+    }
+  },
+  verticalAlign: {
+    options: {
+      top: 'top',
+      middle: 'middle',
+      bottom: 'bottom'
+    }
+  },
+  position: {
+    options: posList.reduce(function (map, pos) {
+      map[pos] = pos;
+      return map;
+    }, {})
+  },
+  distance: {
+    min: 0,
+    max: 100
+  }
+};
+app.config = {
+  rotate: 90,
+  align: 'left',
+  verticalAlign: 'middle',
+  position: 'insideBottom',
+  distance: 15,
+  onChange: function () {
+    const labelOption = {
+      rotate: app.config.rotate,
+      align: app.config.align,
+      verticalAlign: app.config.verticalAlign,
+      position: app.config.position,
+      distance: app.config.distance
+    };
+    myChart.setOption({
+      series: [
+        {
+          label: labelOption
+        },
+        {
+          label: labelOption
+        },
+        {
+          label: labelOption
+        },
+        {
+          label: labelOption
+        }
+      ]
+    });
+  }
+};
+const labelOption = {
+  show: true,
+  position: app.config.position,
+  distance: app.config.distance,
+  align: app.config.align,
+  verticalAlign: app.config.verticalAlign,
+  rotate: app.config.rotate,
+  formatter: '{c}  {name|{a}}',
+  fontSize: 16,
+  rich: {
+    name: {}
+  }
+};
+option = {
+  title : {
+    left:"center",
+    text:'Filebench Test Of Native and BoesFS',
+    subtext:'Average Frequency Of Each Flow'
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  legend: {
+    data: ['Forest', 'Steppe', 'Desert', 'Wetland']
+  },
+  toolbox: {
+    show: true,
+    orient: 'vertical',
+    left: 'right',
+    top: 'center',
+    feature: {
+      mark: { show: true },
+      dataView: { show: true, readOnly: false },
+      magicType: { show: true, type: ['line', 'bar', 'stack'] },
+      restore: { show: true },
+      saveAsImage: { show: true }
+    }
+  },
+  xAxis: [
+    {
+      type: 'category',
+      axisTick: { show: false },
+      data: ['deletefile', 'listdir', 'statefile', 'closefile', 'fsyncfile','appendfilerand','openfile','readfile','writefile','createfile']
+    }
+  ],
+  yAxis: [
+    {
+      axisLabel: {
+        formatter: '{value} ops/s'
+      },
+      type: 'value'
+    }
+  ],
+  series: [
+    {
+      name: 'native',
+      type: 'bar',
+      barGap: 0,
+      label: labelOption,
+      emphasis: {
+        focus: 'series'
+      },
+      data: [2891.6, 2891.6, 2891.6, 2891.6,2891.9,2892,2892,2892,2892.1,2892.3]
+    },
+    {
+      name: 'boesfs',
+      type: 'bar',
+      label: labelOption,
+      emphasis: {
+        focus: 'series'
+      },
+      data: [2746.1, 2746.1,2746.2, 2746.3, 2746.8, 2746.8,2746.8,2746.8,2746.8,2747]
+    },
+  ]
+};
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

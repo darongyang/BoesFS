@@ -1,0 +1,4 @@
+# 只允许 /bin/bash 对任何文件进行lookup、read、open操作
+p, /bin/bash, lookup , file,allow
+p, /bin/bash, read  , file,allow
+p, /bin/bash, open , file,allow

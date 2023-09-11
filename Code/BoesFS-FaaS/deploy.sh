@@ -1,0 +1,1 @@
+fn create app myapp && fn deploy --app myapp --local

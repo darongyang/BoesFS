@@ -1,0 +1,7 @@
+# 不允许 write 和 unlink /home/boes/test3下的
+# 但是允许write /home/boes/test3/sub下的
+# 但是不允许write /home/boes/test3/sub/b.txt
+p, /bin/bash, /home/boes/test3, write,  dir, deny
+p, /bin/bash, /home/boes/test3, unlink,  dir, deny
+p, /bin/bash, /home/boes/test3/sub , unlink, dir, deny
+p, /bin/bash, /home/boes/test3/sub/b.txt, write,  file, deny

@@ -1,0 +1,9 @@
+
+p,   /bin/bash ,  /home/boes/read1.txt , read , (*,*), file , deny
+p,   /bin/bash ,  /home/boes/read2.txt , read , (*,0), file , deny
+p,   /bin/bash ,  /home/boes/read3.txt , read , (100,*), file , deny
+p,   /bin/bash ,  /home/boes/read4.txt , read , (100,0), file , deny
+p,   /bin/bash ,  /home/boes/read3.txt , link , (*), file , deny
+p,   /bin/bash ,  /home/boes/read4.txt , link , (/home/boes/read5.txt), file , deny
+
+

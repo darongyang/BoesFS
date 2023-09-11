@@ -1,0 +1,186 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=scatter-simple&code=MYewdgzgLgBAZhGBeGBtA5GAhlAlgNwFMAKAUQA0AVAFgEp0AaGdAIREIgDEBldAXQDcAWABQokAAc84ZDADeomDDxQANoQBc8xUpjq4UDQCJghMFEIAnIwx1KLAD0PMAMrjABXBzADWVsISqMNQAdACMABwhAAzKWJYwxKAAthKWHBC0yrjJhHF-YDAA7rhQABYwFDQwWGAAJjBsHDyMdsqETtxQAJ7qWgoiurpw4FDcuABemjAATADMbQC-toO6EB4ARo7ORhbQ8CAJYbF4uRA2betbHWM9fdqrQyPm41NakUs6yzoA5pa4dX6bX0znQcwApK1HjB_j8yqDjpCVkMNiAoFAQMktOgAOxItoYiTYsIAVnx0NA5iw7hcWA2gS0UEsHkIX2RekIPzMgIeQzqOCwWgw2DwRDIVDojGYTS4vD47KUIOxpnMVihQ22XV60wGQyUzzGk2mM2iSwVMFR6Mx71Nq2-qwcAEEHLgIEK2rq9T0JNN0MAcJzDt11XrsLlsYAF-MAMhGAeudAMEaIaGYcILhA_ukYGx3MTumTAHEsESYBFzUpk5Qblr7p69QcXkatDMZm0lPba_yoIL4BBSzUXRBafTVEDoU9Rq9jbba229RAJKpSm4AiPa0oIGUQEUtHAsKoIKzRzBFp9VvKdN1na73dCa7pvb78LuWTmy1hw8xANHKgEp_QBvpoAX1JfGBk1TdNcHALN6kA_NC3eEle3LSs7h1FthnHBtZmbQ8ZyGZJ3C0HFol7ZIsAcG1CJQkjXUHBleVXEZLGI9ErGxORH1UFlFhgCBAP1NC3hgD4sN7OcFygJdkMPNcNy3ZRmQPacTyUM9Vn3f4OGvIZb1fcMjBFAgSCqOgLkPCBumSVFVAnRtyJMsyLOxJlcFqH51EAjsu1QFClFQQicSiahlNXNBCIiUIIhJQLVx8hg_JCGYcUi2tooiGYQjmMJEr1ZK5jigA2TKhmykJwoK3RkrCcIIlK7yQtCXKIt7GqGAiCrqASxrguaiqZgy3tSuIywfAABRAdxnC03R3I0oL5GUbofWxLAiEsLAuSlZNsUdZbVsIdAjy8mBqq4uyQEs9DcpsoLVDpGiJrHet-LCXKDuPISUIAenemABp8cSVz1T7dAXAIqwk2tAY1ebfQgU6AXQD6vtbXsIZgKa0DkOaFuYJarB29a319R0ADU8z25ZZqdft3guo8-ARo9e3vbEIHTCxLHh6FyY9FCNqMGUeGM2tTPM06rIEksULRzzJLQMIupCHEZiO1A5YiHE4rmZW5YATgq3L2oOlXmtSuZta1hhtdS6IzY6o2IiiEkAtt1XcvCJXnYtnLonyj3QpCerze16IQhJA3D36-JhtG8x_vbAVpqCjGmex7a1qYDbmC23G1v2mWjuFiyxYujrrqHWO6L46YnpelDsN0QGfr-2ihhR4HCFB8ulBR-woeZ2G6g58HEYZ-mlClpPe5T7PdvTgnNpJsmmAxymrwEmnFjpw9AbrnusfQFmcDZwfdFepTREWAQgA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    const fs = ['native(EXT4)', 'BoesFS'];
+
+option = {
+  title: {
+    left:"center",
+    text: 'Linux kernel 4.18.0 tar (compress) time taken with EXT4 and BoesFS',
+    textStyle: {
+      fontSize: 23
+    },
+    subtext: "test for 10 times",
+    subtextStyle: {
+      fontSize: 18
+    }
+  },
+  grid: {
+    left: '3%',
+    right: '10%',
+    bottom: '7%',
+    top: '15%',
+    containLabel: true
+  },
+  legend: {
+    data: ['native(EXT4)', 'BoesFS'],
+    left: 'center',
+    textStyle: {
+      fontSize: 20
+    },
+    bottom: 10
+  },
+  xAxis: [
+    {
+      type: 'category',
+      name: '运行环境',
+      nameLocation: 'end',
+      nameGap: 8,
+      nameTextStyle: {
+        fontSize: 22
+      },
+      data: fs,
+      axisLabel: {
+        fontSize: 20
+      },
+      splitLine: {
+        show: false
+      }
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      name: '压缩时间',
+      nameLocation: 'end',
+      nameGap: 15,
+      nameTextStyle: {
+        fontSize: 22
+      },
+      min: 70,
+      max: 100,
+      axisLabel: {
+        formatter: '{value} s',
+        fontSize: 18
+      },
+      splitLine: {
+        show: true
+      }
+    }
+  ],
+  series: [
+    {
+      name:"native(EXT4)",
+      symbolSize: 20,
+      symbol: 'triangle',
+      data: [
+        [0,78.4],
+        [0,84.85],
+        [0,78.27],
+        [0,82.31],
+        [0,83.26],
+        [0,83.85],
+        [0,81.18],
+        [0,84.65],
+        [0,81.47],
+        [0,81.21],
+      ],
+      markPoint: {
+        data: [
+          { type: 'average', name: 'Average' }
+        ],
+        symbolSize: 60,
+        label: {
+          fontSize: 16
+        }
+      },
+      // markLine: {
+      //   lineStyle: {
+      //     type: 'solid'
+      //   },
+      //   data: [{ type: 'average', name: 'AVG' }, { xAxis: 160 }]
+      // },
+      type: 'scatter'
+    }, 
+    {
+      name:"BoesFS",
+      symbolSize: 18,
+      data: [
+        [1,81.72],
+        [1,87.23],
+        [1,91.67],
+        [1,82.39],
+        [1,92.09],
+        [1,88.54],
+        [1,86.12],
+        [1,93.06],
+        [1,84.65],
+        [1,90.57],
+      ],
+      markPoint: {
+        data: [
+          { type: 'average', name: 'Average' }
+        ],
+        symbolSize: 60,
+        label: {
+          fontSize: 16
+        }
+      },
+      // markLine: {
+      //   lineStyle: {
+      //     type: 'solid'
+      //   },
+      //   data: [{ type: 'average', name: 'AVG' }, { xAxis: 160 }]
+      // },
+      type: 'scatter'
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

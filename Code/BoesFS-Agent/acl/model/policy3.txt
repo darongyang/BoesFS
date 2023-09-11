@@ -1,0 +1,29 @@
+# /home/boes/test4/B 及其下的子文件，子目录可见，其余均不可见
+p, /bin/bash, /home/boes , open, file, allow
+p, /bin/bash, /home/boes/test4 , lookup, file, allow
+p, /bin/bash, /home/boes/test4 , open, file, allow
+p, /bin/bash, /home/boes/test4/B , lookup, file, allow
+p, /bin/bash, /home/boes/test4/B , open, file, allow
+p, /bin/bash, /home/boes/test4/B, lookup, dir, allow
+p, /bin/bash, /home/boes/test4/B, open,  dir, allow
+
+p, /bin/bash, /home/boes/test0/A , lookup, file, deny
+p, /bin/bash, /home/boes/test0/a.txt , lookup,  file, deny
+p, /bin/bash, /home/boes/test0/B, open,  file, deny
+
+p, /bin/bash, /home/boes , open , file, allow
+p, /bin/bash, /home/boes/test , lookup , file, allow
+p, /bin/bash, /home/boes/test , open , file, allow
+p, /bin/bash, /home/boes/test , lookup , dir, allow
+p, /bin/bash, /home/boes/test , open , dir, allow
+
+
+==============================================================
+p, /bin/bash, /home/boes , open, file, allow
+p, /bin/bash, /home/boes/test4 , lookup, file, allow
+p, /bin/bash, /home/boes/test4 , open, file, allow
+p, /bin/bash, /home/boes/test4/B , lookup, file, allow
+p, /bin/bash, /home/boes/test4/B , open, file, allow
+p, /bin/bash, /home/boes/test4/B, lookup, dir, allow
+p, /bin/bash, /home/boes/test4/B, open,  dir, allow
+===========================================================

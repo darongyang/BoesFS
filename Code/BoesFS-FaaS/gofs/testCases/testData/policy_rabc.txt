@@ -1,0 +1,14 @@
+p, g1, /home/boes/gofs/testCases/temp/lookup.txt , lookup , file , deny
+p, g1, /home/boes/gofs/testCases/temp/read.txt , read ,  file , deny
+p, g2, /home/boes/gofs/testCases/temp/write.txt, write,  file , deny
+p, g2, /home/boes/gofs/testCases/temp/open.txt, open, file , deny
+p, g1, /home/boes/gofs/testCases/temp/unlink.txt,unlink, file , deny
+p, g1, /home/boes/gofs/testCases/temp/mkdir,mkdir, file , deny
+p, g1, /home/boes/gofs/testCases/temp/rmdir,rmdir, file , deny
+p, g1, /home/boes/gofs/testCases/temp/wrunlink.txt,write, file , deny
+p, g1, /home/boes/gofs/testCases/temp/wrunlink.txt,unlink, file , deny
+p, g1, /home/boes/gofs/testCases/temp/dir , write, dir,deny
+p, g1, /home/boes/gofs/testCases/temp/dir , unlink, dir,deny
+
+g, python3.11, g1
+g, /bin/sh, g2

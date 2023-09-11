@@ -1,0 +1,1 @@
+cd cli && make build && sudo cp fn /usr/local/bin/fn && sudo chmod +x /usr/local/bin/fn

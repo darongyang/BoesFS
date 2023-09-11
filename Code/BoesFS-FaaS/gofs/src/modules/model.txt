@@ -1,0 +1,11 @@
+[request_definition]
+r = obj, act
+
+[policy_definition]
+p = obj, act
+
+[policy_effect]
+e = !some(where (p.eft == deny))
+
+[matchers]
+m =  r.obj == p.obj && r.act == p.act

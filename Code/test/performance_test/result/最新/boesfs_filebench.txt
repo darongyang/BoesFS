@@ -1,0 +1,30 @@
+Filebench Version 1.5-alpha3
+WARNING: Could not open /proc/sys/kernel/shmmax file!
+It means that you probably ran Filebench not as a root. Filebench will not increase shared
+region limits in this case, which can lead to the failures on certain workloads.
+0.000: Allocated 173MB of shared memory
+0.005: File-server Version 3.0 personality successfully loaded
+0.005: Populating and pre-allocating filesets
+0.016: bigfileset populated: 10000 files, avg. dir. width = 20, avg. dir. depth = 3.1, 0 leafdirs, 1240.757MB total size
+0.016: Removing bigfileset tree (if exists)
+0.021: Pre-allocating directories in bigfileset tree
+0.030: Pre-allocating files in bigfileset tree
+2.392: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+2.392: Population and pre-allocation of filesets completed
+2.392: Starting 1 filereader instances
+3.415: Running...
+63.466: Run took 60 seconds...
+63.497: Per-Operation Breakdown
+statfile1            59484ops      990ops/s   0.0mb/s      0.0ms/op [0.01ms - 24.43ms]
+deletefile1          59482ops      990ops/s   0.0mb/s      0.7ms/op [0.03ms - 945.54ms]
+closefile3           59484ops      990ops/s   0.0mb/s      0.0ms/op [0.01ms - 12.46ms]
+readfile1            59484ops      990ops/s 129.2mb/s      0.5ms/op [0.02ms - 148.03ms]
+openfile2            59484ops      990ops/s   0.0mb/s      0.1ms/op [0.02ms - 103.36ms]
+closefile2           59484ops      990ops/s   0.0mb/s      0.0ms/op [0.01ms - 75.22ms]
+appendfilerand1      59484ops      990ops/s   7.7mb/s      3.4ms/op [0.01ms - 139.24ms]
+openfile1            59486ops      991ops/s   0.0mb/s      0.1ms/op [0.02ms - 105.58ms]
+closefile1           59486ops      991ops/s   0.0mb/s      0.0ms/op [0.01ms - 38.36ms]
+wrtfile1             59486ops      991ops/s 122.9mb/s     41.2ms/op [0.02ms - 381.33ms]
+createfile1          59534ops      991ops/s   0.0mb/s      0.2ms/op [0.03ms - 100.03ms]
+63.497: IO Summary: 654378 ops 10896.155 ops/s 990/1981 rd/wr 259.9mb/s  15.4ms/op
+63.497: Shutting down processes

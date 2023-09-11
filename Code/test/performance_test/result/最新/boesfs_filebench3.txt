@@ -1,0 +1,30 @@
+Filebench Version 1.5-alpha3
+WARNING: Could not open /proc/sys/kernel/shmmax file!
+It means that you probably ran Filebench not as a root. Filebench will not increase shared
+region limits in this case, which can lead to the failures on certain workloads.
+0.000: Allocated 173MB of shared memory
+0.004: File-server Version 3.0 personality successfully loaded
+0.004: Populating and pre-allocating filesets
+0.013: bigfileset populated: 10000 files, avg. dir. width = 20, avg. dir. depth = 3.1, 0 leafdirs, 1240.757MB total size
+0.014: Removing bigfileset tree (if exists)
+0.019: Pre-allocating directories in bigfileset tree
+0.029: Pre-allocating files in bigfileset tree
+2.849: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+2.849: Population and pre-allocation of filesets completed
+2.849: Starting 1 filereader instances
+3.871: Running...
+63.936: Run took 60 seconds...
+63.949: Per-Operation Breakdown
+statfile1            62500ops     1040ops/s   0.0mb/s      0.0ms/op [0.01ms - 32.59ms]
+deletefile1          62494ops     1040ops/s   0.0mb/s      0.4ms/op [0.03ms - 787.07ms]
+closefile3           62500ops     1040ops/s   0.0mb/s      0.0ms/op [0.01ms - 21.09ms]
+readfile1            62500ops     1040ops/s 135.3mb/s      0.4ms/op [0.02ms - 394.31ms]
+openfile2            62500ops     1040ops/s   0.0mb/s      0.1ms/op [0.02ms - 146.92ms]
+closefile2           62500ops     1040ops/s   0.0mb/s      0.0ms/op [0.01ms - 38.81ms]
+appendfilerand1      62501ops     1041ops/s   8.1mb/s      3.3ms/op [0.01ms - 369.15ms]
+openfile1            62502ops     1041ops/s   0.0mb/s      0.1ms/op [0.02ms - 163.05ms]
+closefile1           62502ops     1041ops/s   0.0mb/s      0.0ms/op [0.01ms - 25.77ms]
+wrtfile1             62503ops     1041ops/s 129.1mb/s     38.5ms/op [0.02ms - 391.53ms]
+createfile1          62550ops     1041ops/s   0.0mb/s      0.2ms/op [0.03ms - 158.36ms]
+63.950: IO Summary: 687552 ops 11446.200 ops/s 1040/2081 rd/wr 272.6mb/s  14.4ms/op
+63.950: Shutting down processes

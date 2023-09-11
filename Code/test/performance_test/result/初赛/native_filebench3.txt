@@ -1,0 +1,30 @@
+Filebench Version 1.5-alpha3
+WARNING: Could not open /proc/sys/kernel/shmmax file!
+It means that you probably ran Filebench not as a root. Filebench will not increase shared
+region limits in this case, which can lead to the failures on certain workloads.
+0.000: Allocated 173MB of shared memory
+0.048: File-server Version 3.0 personality successfully loaded
+0.048: Populating and pre-allocating filesets
+0.075: bigfileset populated: 10000 files, avg. dir. width = 20, avg. dir. depth = 3.1, 0 leafdirs, 1240.757MB total size
+0.075: Removing bigfileset tree (if exists)
+0.084: Pre-allocating directories in bigfileset tree
+0.179: Pre-allocating files in bigfileset tree
+10.153: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+10.153: Population and pre-allocation of filesets completed
+10.154: Starting 1 filereader instances
+11.189: Running...
+71.249: Run took 60 seconds...
+71.278: Per-Operation Breakdown
+statfile1            39548ops      658ops/s   0.0mb/s      0.0ms/op [0.02ms - 50.82ms]
+deletefile1          39543ops      658ops/s   0.0mb/s      4.6ms/op [0.04ms - 1839.18ms]
+closefile3           39549ops      658ops/s   0.0mb/s      0.0ms/op [0.01ms - 31.58ms]
+readfile1            39553ops      658ops/s  85.0mb/s      1.3ms/op [0.02ms - 514.30ms]
+openfile2            39554ops      659ops/s   0.0mb/s      0.1ms/op [0.02ms - 138.01ms]
+closefile2           39554ops      659ops/s   0.0mb/s      0.0ms/op [0.01ms - 19.30ms]
+appendfilerand1      39554ops      659ops/s   5.2mb/s      5.3ms/op [0.02ms - 909.43ms]
+openfile1            39557ops      659ops/s   0.0mb/s      0.1ms/op [0.02ms - 83.54ms]
+closefile1           39559ops      659ops/s   0.0mb/s      0.0ms/op [0.01ms - 108.81ms]
+wrtfile1             39562ops      659ops/s  81.9mb/s     57.4ms/op [0.03ms - 1426.16ms]
+createfile1          39598ops      659ops/s   0.0mb/s      0.6ms/op [0.04ms - 366.78ms]
+71.278: IO Summary: 435131 ops 7244.278 ops/s 658/1317 rd/wr 172.1mb/s  23.2ms/op
+71.278: Shutting down processes

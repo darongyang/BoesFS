@@ -1,0 +1,34 @@
+apply plugin: 'java'
+
+ext {
+   fdkVersion = '1.0.98'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://dl.bintray.com/fnproject/fnproject'
+    }                
+}
+
+dependencies {
+    runtime "com.fnproject.fn:api:$fdkVersion"
+    // runtime "com.fnproject.fn:runtime:$fdkVersion" // this is optional and included with its deps in the base image to reduce layer size
+
+    testCompile "junit:junit:4.12"
+    testCompile "com.fnproject.fn:testing-core:$fdkVersion"
+    testCompile "com.fnproject.fn:testing-junit4:$fdkVersion"    
+}
+
+task cacheDeps(type: Exec) {
+    configurations.testCompile.files
+    commandLine 'echo', 'Downloaded all dependencies'
+}
+
+
+task copyDeps(type: Copy) {
+  from configurations.compile
+  into "${project.buildDir}/deps"
+}
+
+build.dependsOn copyDeps

@@ -1,0 +1,9 @@
+p, /home/boes/gofs/testCases/temp/read1.txt, read1, file, deny
+p, /home/boes/gofs/testCases/temp/read2.txt, read2, file, deny
+p, /home/boes/gofs/testCases/temp/read3.txt, read3, file, deny
+p, /home/boes/gofs/testCases/temp/read.txt, read2, file, deny
+
+a, read1, read, (*,*)
+a, read2, read, (*,1)
+a, read3, read, (3,0)
+a, read3, link, (/home/boes/gofs/testCases/temp/ln.txt)

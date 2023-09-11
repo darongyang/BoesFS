@@ -1,0 +1,174 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=scatter-simple&code=MYewdgzgLgBAZhGBeGBtA5GAhlAlgNwFMAKAUQA0AVAFgEp0AaGdAIREIgDEBldAXQDcAWABQokAAc84ZDADeomDDxQANoQBc8xUpjq4UDQCJghMFEIAnIwx1KLAD0PMAMrjABXBzADWVsISqMNQAdACMABwhAAwwHuZYljDEACaEoAC2EpYcELTKuBmEylh-YDAA7rhQABYwFDQwWGApMGwcPIx2yoRO3FAAnupaCiK6unDgUNy4AF6aMABMAMzdAL62Y7oQHgBGjs5GFtDwIElhsXhFEDbdO_u904PD2lvjk-Yz81qR6zobOgA5pZcCkRt19M50MsAKRdN4wEGAmpQi5wzbjXYgKBQEAZLToADs6O6uIkBLCAFYSQjQAl3C4sLtAlooJYPIR_hi9IRAWYwa9xikcFgtBhsHgiGQqHRGMx2lxeHxuUpIQTTOYrPDxgd-kMFqNxkoPtM5gtFtF1iqYFicXifpatgCtg4AIIOXAQMXdQ1GwYSBboYA4XlnAbao3YIoEwAL8YAZCMA9c6AYI0I-Mo4QXCBg9IwAT-andOmAOJYckwCLWpTpyiPPUvX1G06fM1aRaLbpKZ2N4VQUXwCCVpoeiCM5mqcEI95TL7mx2NrtGiASVTVNwBCeNpQQGogCpaOBYVQQTmTmBrP5bZU6Abuz3ehEN3T-wP4Q8cgtVrDR5iAY8jANHKgCU_oAb6aAC-pH4wOmmbZrg4B5i04HFqWPyUoO1a1s8BodhM04tks7angu4wZO4WgVlhGRYA4PxhIOlGeqOLKCpukyWBROJWAScivqoHJrDAEDgcaOHfDAvwEYOS4rlAa6YaeW47nuyjsie84XkoV5bMeIIcPe4yPp-0ZGBKBAkA0dC3KeEADBkWKqDOrbRBJ1m2QSbK4M0gLqOBPZ9qgWFKKgjkXDEywaZuaCOQAnCEyyRWFm6BQwUQRJS8WNol0VhKFg4BVFMSpTlEUMJl2X-UV0XRISaVGhlISLNQ1XjIlUSRXFhXNSEkVVYOjUwBRlg-AACiA7jOPpug-bp4XyMoAwBgSWBEJYWB8nK6YEq6S0rYQ6BnmVvVbs5IB2bhABsjllaoTKMeNU7NiJYSnWV57iVhz4EhA2YWJY6BWjAPpYetRgKjwFmNlZNnHfZolkaek1oGVqA0cFkWnQdaA0dFp1tYjmMxQVuPFSE1AROjSNE9QpVyRjROUosZN44SYQM0Tp3dYTFUNe1eORfTPWDv1Q0jeYG6bvDfnU0ocizfNzCLVY21rV-gabQrq17dT6MQ7Z0PnYVV1jqL4UmtDj3PVhhFPnNgafTg32_QiL3qaIawCEAA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    const fs = ['native(EXT4)', 'BoesFS'];
+
+option = {
+  title: {
+    left:"center",
+    text: 'Linux kernel 4.18.0 untar (decompress) time taken with EXT4 and BoesFS',
+    textStyle: {
+      fontSize: 23
+    },
+    subtext: "test for 10 times",
+    subtextStyle: {
+      fontSize: 18
+    }
+  },
+  grid: {
+    left: '3%',
+    right: '10%',
+    bottom: '7%',
+    top: '15%',
+    containLabel: true
+  },
+  legend: {
+    data: ['native(EXT4)', 'BoesFS'],
+    left: 'center',
+    textStyle: {
+      fontSize: 20
+    },
+    bottom: 10
+  },
+  xAxis: [
+    {
+      type: 'category',
+      name: '运行环境',
+      nameLocation: 'end',
+      nameGap: 8,
+      nameTextStyle: {
+        fontSize: 22
+      },
+      data: fs,
+      axisLabel: {
+        fontSize: 20
+      },
+      splitLine: {
+        show: false
+      }
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      name: '解压缩时间',
+      nameLocation: 'end',
+      nameGap: 15,
+      nameTextStyle: {
+        fontSize: 22
+      },
+      min: 8,
+      max: 11,
+      axisLabel: {
+        formatter: '{value} s',
+        fontSize: 18
+      },
+      splitLine: {
+        show: true
+      }
+    }
+  ],
+  series: [
+    {
+      name:"native(EXT4)",
+      symbolSize: 20,
+      symbol: 'triangle',
+      data: [
+        [0,10.03],
+        [0,9.39],
+        [0,8.85],
+        [0,9.13],
+        [0,9.05],
+        [0,9.13],
+        [0,9.07],
+        [0,9.24],
+        [0,8.99],
+        [0,8.97],
+      ],
+      markPoint: {
+        data: [
+          { type: 'average', name: 'Average' }
+        ],
+        symbolSize: 60,
+        label: {
+          fontSize: 16
+        }
+      },
+      type: 'scatter'
+    }, 
+    {
+      name:"BoesFS",
+      symbolSize: 18,
+      data: [
+        [1,10.96],
+        [1,9.69],
+        [1,9.35],
+        [1,9.48],
+        [1,9.43],
+        [1,9.52],
+        [1,9.71],
+        [1,9.67],
+        [1,9.04],
+        [1,9.92],
+      ],
+      markPoint: {
+        data: [
+          { type: 'average', name: 'Average' }
+        ],
+        symbolSize: 60,
+        label: {
+          fontSize: 16
+        }
+      },
+      type: 'scatter'
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=bar-label-rotation&code=MYewdgzgLgBADiCAZAltGBeGBtAsAKBhgHIAbAUwDMpiAaAo4gJxQHMALG-wkqEOOgxIAjEFD4BbQT2IpIKACblpjOREXkAKvxUk1GpFS5DZ8pQCU2nXafVKAQmMk39S7XEPUXZrf0sdjGVdyR3EQCU9A1R9QyX9rAgBdAG4CAn4oFHBMGABvIUyoCgAuPKEiCmpS4mByMChyJl0iBoAPKGqAYQAFAFUYEAA3RvZyAEMFAcoYADEwOCYQACtyYFgxsEnHcggZgGUAWhmxsb3mmAgAV2E2jpJezcaYBRRKSka62FAwYEumJjqwAAnuc-HBqgAGYhCAC-3BaIBApEy4LKPBaLFYrEa1TGrTQ5zxaG6IDkDSYpXy6KIMCgQLg5GqEHYExAAHdodSYbD4TAKNjNpTys8xlAxqVsMRKGA6CIQDtKBBiIleQjUQB2CE8gqI0iiVpC6nM9mlKBMS7kVUDFifarDJiZYBjUjnSp3ZhWKI0sHVWr1Rrnd6iv6MtE0mkSMZMADWlIu7BNtPN5BgcOFRAUorGADUUOQ2XHjQWkxbaDAARMAPJgUhA0qUZ0QFNp6lESOsFDATT00O5eOJs2l2k9iVkOTKMvEYRR2XEaBjYDR5Wpq1EAHQEAAwsJ4uD5uri5jYYAQQgAEl273-7vk6nhdyeC2iK1j_iIBLhVTwy0RyQnQ1WE3EEDyJCBNE7WM8mvetG33dMRTFUcoUnABGWcUOQkgACZMOIAAWXCADZcIADlwjCoRVeCwDGCRyAAcTGVFiAAZmQ6jaNDYhAHnrQAlz0AM8jAEXlQAHU3OIgaLopAQH_LIwF9T4A3vIQqJ4IFXzQD9qS_b86QZO1nQtMSYAkriel6QADZUACldAHBjUSlJ4FSiCbG13xwT8OLo6ppSM3SuOnJoD38xjUQhA9yAkOAWXUVztO_GBKGky5XLnRo8yVeCn2_TNEJwFiADo8LLFC8Ly9Uy01PKAE4y0q_KWKKjCqqKnC8pIoq8PylCyywlCSLyljHJpTKiFimkTOqUQFSVA9fImmcwoiqKNLDOL4sS5LnLSzk4uGmlsvFHAITy0KYBQ_qarywjusqy6yzws6AFZyqw46yxI_KTowvrCMSe9eV-_AYWSIA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    const posList = [
+  'left',
+  'right',
+  'top',
+  'bottom',
+  'inside',
+  'insideTop',
+  'insideLeft',
+  'insideRight',
+  'insideBottom',
+  'insideTopLeft',
+  'insideTopRight',
+  'insideBottomLeft',
+  'insideBottomRight'
+];
+
+option = {
+  title: {
+    left: 'center',
+    text: 'CPU overhead of Fnproject and BoesFS-FaaS',
+    subtext: 'Under different concurrency',
+    top: '0'
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    }
+  },
+  legend: {
+    data: ['fn', 'boesfs'],
+    top: 70
+  },
+  toolbox: {
+    show: true,
+    orient: 'vertical',
+    left: 'right',
+    top: 'center',
+    feature: {
+      mark: { show: true },
+      dataView: { show: true, readOnly: false },
+      magicType: { show: true, type: ['line', 'bar', 'stack'] },
+      restore: { show: true },
+      saveAsImage: { show: true }
+    }
+  },
+  xAxis: [
+    {
+      type: 'category',
+      axisTick: { show: false },
+      data: ['0', '1', '10', '20', '40', '60', '80', '100'],
+      nameGap: '30',
+      name: '每秒触发数',
+      nameLocation: 'center'
+    }
+  ],
+  yAxis: [
+    {
+      type: 'value',
+      name: 'CPU占用指数'
+    }
+  ],
+  series: [
+    {
+      name: 'fn',
+      type: 'bar',
+      barGap: 0,
+      emphasis: {
+        focus: 'series'
+      },
+      data: [3.4, 14.7, 70.9, 93.3, 110.9, 120.8, 143.1, 218.3],
+    },
+    {
+      name: 'boesfs',
+      type: 'bar',
+      emphasis: {
+        focus: 'series'
+      },
+      data: [0.0, 1.3, 9.6, 29.6, 41.5, 72.0, 83.0, 108.6]
+    },
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

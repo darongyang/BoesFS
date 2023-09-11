@@ -1,0 +1,42 @@
+
+# Releases
+
+## v 0.6.26
+
+* Enabling support for node18, node16, go1.19, go1.18, ruby3.1.
+* Removing support for node11, go1.15, python3.6, python3.7
+
+## v 0.6.25
+
+* Support for multiple shapes(architectures) functions images: 
+  * x86 (default)
+  * arm
+  * multiarch (x86, arm)
+  
+* cli now is supported on `Arm Linux` as well.
+
+
+## v 0.6.24
+
+* Allowing `fn inspect functions` and `fn list functions` for PBF(Pre-Built Functions) function with empty image and digest field. By default, it was not supported. 
+  
+  Note: If you have functions created using Pre-Built Functions, then please upgrade to this version to have fn list and fn inspect  work properly
+
+
+## v 0.6.7
+
+* Support for following languages versions:
+    * Node 14
+    * Go 1.15
+    * Ruby 2.7
+  
+    Check out `fn init --help` for available runtime environments.
+* Docker runtime and build image stamping in func.yaml for a language runtime. 
+
+## v 0.4.156
+
+* Routes have now been removed from fn and replaced with functions and triggers.
+* The migrate command will upgrade your func.yaml to include a trigger section in place of `path` field.
+* `fn call` has been replaced with `fn invoke`.
+
+Please see [Setting Functions Free Blog Post](https://medium.com/fnproject/setting-functions-free-15d063be72bf) and [Fn Project Tutorials](http://fnproject.io/tutorials/) for more information.

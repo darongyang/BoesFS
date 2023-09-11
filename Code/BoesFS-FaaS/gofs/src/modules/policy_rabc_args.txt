@@ -1,0 +1,13 @@
+p,   reader1 ,  /home/boes/gofs/testCases/temp/read1.txt , read1, file, deny
+p,   reader2 ,  /home/boes/gofs/testCases/temp/read2.txt , read1, file , deny
+p,   reader3 ,  /home/boes/gofs/testCases/temp/read3.txt , read1, file , deny
+p,   reader1 ,  /home/boes/gofs/testCases/temp/read3.txt , read3, file , deny
+p,   reader1 ,  /home/boes/gofs/testCases/temp/read4.txt , read2, file , deny
+
+g, /bin/bash, reader1
+g, /bin/bash, reader2
+g, /bin/sh, reader3
+
+a, read1, read , (*,*)
+a, read1, write , (*,*)
+a, read2, read , (100,0)

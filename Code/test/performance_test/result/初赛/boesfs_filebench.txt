@@ -1,0 +1,30 @@
+Filebench Version 1.5-alpha3
+WARNING: Could not open /proc/sys/kernel/shmmax file!
+It means that you probably ran Filebench not as a root. Filebench will not increase shared
+region limits in this case, which can lead to the failures on certain workloads.
+0.000: Allocated 173MB of shared memory
+0.006: File-server Version 3.0 personality successfully loaded
+0.006: Populating and pre-allocating filesets
+0.023: bigfileset populated: 10000 files, avg. dir. width = 20, avg. dir. depth = 3.1, 0 leafdirs, 1240.757MB total size
+0.023: Removing bigfileset tree (if exists)
+0.030: Pre-allocating directories in bigfileset tree
+0.045: Pre-allocating files in bigfileset tree
+3.136: Waiting for pre-allocation to finish (in case of a parallel pre-allocation)
+3.136: Population and pre-allocation of filesets completed
+3.136: Starting 1 filereader instances
+4.161: Running...
+64.241: Run took 60 seconds...
+64.293: Per-Operation Breakdown
+statfile1            32652ops      543ops/s   0.0mb/s      0.0ms/op [0.02ms - 54.41ms]
+deletefile1          32644ops      543ops/s   0.0mb/s      0.2ms/op [0.04ms - 81.29ms]
+closefile3           32653ops      543ops/s   0.0mb/s      0.0ms/op [0.02ms - 71.87ms]
+readfile1            32653ops      543ops/s  70.2mb/s      2.1ms/op [0.03ms - 144.21ms]
+openfile2            32653ops      543ops/s   0.0mb/s      0.1ms/op [0.03ms - 114.08ms]
+closefile2           32653ops      543ops/s   0.0mb/s      0.0ms/op [0.02ms - 33.08ms]
+appendfilerand1      32653ops      543ops/s   4.2mb/s      7.3ms/op [0.01ms - 247.68ms]
+openfile1            32659ops      543ops/s   0.0mb/s      0.1ms/op [0.03ms - 116.39ms]
+closefile1           32659ops      543ops/s   0.0mb/s      0.0ms/op [0.02ms - 79.01ms]
+wrtfile1             32660ops      543ops/s  67.0mb/s     72.7ms/op [0.04ms - 870.71ms]
+createfile1          32702ops      544ops/s   0.0mb/s      0.5ms/op [0.05ms - 211.89ms]
+64.293: IO Summary: 359241 ops 5977.552 ops/s 543/1087 rd/wr 141.5mb/s  27.7ms/op
+64.293: Shutting down processes

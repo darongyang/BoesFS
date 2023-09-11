@@ -1,0 +1,3 @@
+- 检查是否给定挂载后的环境（如/bin/bash）
+- 未实现log和logpath两个参数
+- 检查路径(mount, acl, prog等)

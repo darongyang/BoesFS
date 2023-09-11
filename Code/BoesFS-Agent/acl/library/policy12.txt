@@ -1,0 +1,8 @@
+# 不允许rmdir和read /home/boes/test4
+# 允许rmdir，但不允许read /home/boes/test4/A 及其之下的子目录
+# 不允许read，但允许rmdir /home/boes/test4/B 及其之下的子目录
+p, /bin/bash, /home/boes/test4 ,rmdir,  dir, deny
+p, /bin/bash, /home/boes/test4 , read ,dir , deny
+p, /bin/bash, /home/boes/test4/B ,rmdir,  dir, deny
+p, /bin/bash, /home/boes/test4/A , read ,dir , deny
+

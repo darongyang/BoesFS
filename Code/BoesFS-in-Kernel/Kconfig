@@ -1,0 +1,7 @@
+config BOES_FS
+	tristate "Boesfs stackable file system (EXPERIMENTAL)"
+	help
+	  Boesfs is a stackable file system which simply passes its
+	  operations to the lower layer.  It is designed as a useful
+	  template for developing or debugging other stackable file systems,
+	  and more (see Documentation/filesystems/boesfs.txt). 

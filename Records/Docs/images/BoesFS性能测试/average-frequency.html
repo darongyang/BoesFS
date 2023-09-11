@@ -1,0 +1,124 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=scatter-simple&lang=js&code=PYBwLglsB2AEC8sDeAoWsAeBBDEDOAXMmuqWAJ4gCmRA5AMYCGYVA5sAE7m0A0JpsRrjwAVCPQDWRJLDwALYAHciAM0YAbPFVgBfPgPQATZoyIBtWtGYQAblV6xaAI2BU8KvLQC6-3b_I4-NL8ZJQ0jjYaAK72vgJC-AAyjE5U6sEGpCqcALbMLBx0SJHqMTqwoHgA9J4h6Hp1skzq4WAcMSQN6JBgLbAZpC0qYAQARPRU0AWjcbAsGCO0AGIQLanQ9HKwIm5gsADyKrAActZ2gtCGsABCrnhLAMq8IXhRTvOLWHYcjKzaSxwqABHGIbbidXxaDgQNzmEKoTJ4cg5FzqB4QABe4QAzAAGWboejAdScAi0ADE2IA7FgAEwAESwz0yxjAplgZka6AsVkgdgc1IArABOQUAOkFuMFAEYvI0fI0KNQ6HgmGACrQQl1SAiDEiUcT0ViiNLBQTYESSYUKdS6YzmQZWezOZluZYzrFYNiABy47EAFjFADZhcLYArXRz3XzPdig77A9LvbLzW7ebZY97hUGqWLab6I66eR6BVSg4LaXnJYXMsWY7whWWxVTpSmuVH0_yeNTs4HcbTaTWDHWMw2qbSg7ixd6g_6hwIR12fdL_X3pbjw6mOyXu4Ks96JTPN-3F7FqeXK6vvcfMvO5mEVWqNVqQjxSPDGvrUUacfjGpbSQpKhcSDANsQdAQnX6DkT2cO4PAbQUW2lMUe29OVb3NJVwloVV8ioDhNQEHRXw_RFkW_TFwlNc0AOtclgNA_1wPNJ04UjCwXDcBC3zjctsTFaUQzvN0uPcTxePjXFE2TESozEnivX9PcDwDQU5M4-CJK9QUgyEsU_WxHxMlghSJOxJCqXFSd0K3TTuPM2d42DKUNLghzEOFXED0Ff0wzcsyG0nWlExlG8i3c8SG39HNxXzNsOMixS1NDacy3CgQ72wx98MIl90DlHQAG4gA
+	⚠ 请注意，该图表不是 Apache ECharts 官方示例，而是由用户代码生成的。请注意鉴别其内容。
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  xAxis: {
+      type: 'category',
+      axisTick: { show: false },
+      data: ['native', 'boesfs'],
+  },
+  yAxis: {
+      type: 'value',
+      axisLabel: {
+        formatter: '{value} ops/s'
+      },
+      scale: true
+  },
+  title : {
+    left:"center",
+    text:'Filebench Test Of Native and BoesFS',
+    subtext:'Average Frequency'
+  },
+  series: [
+    {
+      symbolSize: 30,
+      color:'#37A2DA',
+      data: [
+        ['native', 37595.5051]
+      ],
+      type: 'scatter'
+    },
+    {
+      symbolSize: 15,
+      color:'#37A2DA',
+      data: [
+        ['native', 38034.699 ],
+        ['native', 36804.181],
+        ['native', 38967.280],
+        ['native', 37652.250],
+        ['native',37576.711],
+        ['native',37964.022],
+        ['native',37260.864],
+        ['native',38144.010 ],
+        ['native',35898.586 ],
+        ['native',37652.448 ],
+      ],
+      type: 'scatter'
+    }
+    ,   
+    {
+      symbolSize: 30,
+      color:'#e06343',
+      data : [
+        ['boesfs',35711.3798]
+      ],
+      type: 'scatter'
+    }
+    ,
+    {
+      symbolSize: 15,
+      color:'#e06343',
+      data: [
+        ['boesfs', 36653.169],
+        ['boesfs', 36804.181],
+        ['boesfs', 34588.345],
+        ['boesfs', 35616.033],      
+        ['boesfs',35775.608],
+        ['boesfs',36468.605],
+        ['boesfs',35908.549 ],
+        ['boesfs',36024.151 ],
+        ['boesfs',34675.281],
+        ['boesfs', 34599.876 ],
+      ],
+      type: 'scatter'
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

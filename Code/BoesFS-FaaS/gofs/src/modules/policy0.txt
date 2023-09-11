@@ -1,0 +1,10 @@
+p,  /home/boes/gofs/testCases/temp/lookup.txt , lookup , file , deny
+p,  /home/boes/gofs/testCases/temp/read.txt , read ,  file , deny
+p,  /home/boes/gofs/testCases/temp/write.txt, write,  file , deny
+p,  /home/boes/gofs/testCases/temp/open.txt, open, file , deny
+p,  /home/boes/gofs/testCases/temp/unlink.txt,unlink, file , deny
+p,  /home/boes/gofs/testCases/temp/unlink.txt,write, file , deny
+p,  /home/boes/gofs/testCases/temp/mkdir,mkdir, file , deny
+p,  /home/boes/gofs/testCases/temp/rmdir,rmdir, file , deny
+p,  /home/boes/gofs/testCases/temp/dir , write, dir,deny
+p,  /home/boes/gofs/testCases/temp/dir , unlink, dir,deny

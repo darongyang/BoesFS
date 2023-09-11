@@ -1,0 +1,28 @@
+
+Welcome To Performance Test of File System!
+
+
+[INFO] Geting testdata now...
+Cloning into 'linux-4.19.280-image'...
+remote: Enumerating objects: 65598, done.
+remote: Total 65598 (delta 0), reused 0 (delta 0), pack-reused 65598
+Receiving objects: 100% (65598/65598), 176.75 MiB | 5.66 MiB/s, done.
+Resolving deltas: 100% (4980/4980), done.
+Checking out files: 100% (61780/61780), done.
+[INFO] Testdata linux-4.19.280 already downloaded
+
+[INFO] TEST 1 : Testing tar linux-4.19.280 now...
+[INFO] TEST 1 : Test tar linux-4.19.280 finished
+
+[INFO] TEST 1 TAR : 21.0225
+DETAILS : [20.69, 21.09, 21.0, 20.88, 21.09, 21.08, 21.23, 21.12]
+[INFO] TEST 2 : Testing untar linux-4.19.280 now...
+[INFO] TEST 2 : Test untar linux-4.19.280 finished
+
+[INFO] TEST 2 UNTAR : 6.1425
+DETAILS : [5.83, 6.23, 6.13, 6.42, 5.96, 6.2, 6.05, 6.32]
+[INFO] TEST 3 : Testing make(tinyconfig) linux-4.19.280 now...
+[INFO] TEST 3 : Test make(tinyconfig) linux-4.19.280 finished
+
+[INFO] TEST 3 MAKE : 4.828749999999999
+DETAILS : [4.82, 4.82, 4.83, 4.82, 4.83, 4.84, 4.84, 4.83]

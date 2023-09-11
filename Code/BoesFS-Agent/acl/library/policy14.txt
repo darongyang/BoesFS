@@ -1,0 +1,11 @@
+p, /bin/bash, /home/boes , open, file, allow
+
+p, /bin/bash, /home/boes , open, dir, allow
+p, /bin/bash, /home/boes , lookup , dir,allow
+
+p, /bin/bash, /home/boes/test , rmdir , file , allow        
+
+p, /bin/bash, /home/boes/test1, read , dir , allow
+p, /bin/bash, /home/boes/test1, write, dir , allow
+p, /bin/bash, /home/boes/test1 , open, dir, allow
+p, /bin/bash, /home/boes/test1 , lookup , dir,allow

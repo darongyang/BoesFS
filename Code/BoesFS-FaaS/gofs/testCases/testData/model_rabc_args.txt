@@ -1,0 +1,14 @@
+[request_definition]
+r = obj, act, args
+
+[policy_definition]
+p = obj, act, args
+
+[policy_effect]
+e = !some(where (p.eft == deny))
+
+[matchers]
+m = a(r.act,p.act;r.args,p.args) && r.obj == p.obj && r.act == p.act && r.args == p.args
+
+[role_definition]
+a = _ , _ ; _ , _
